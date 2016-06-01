@@ -1,0 +1,39 @@
+<h1>Add a new cat!</h1>
+
+<%= form_for @cat do |f| %>
+  <div class="">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </div>
+
+  <div class="">
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+  </div>
+
+  <div class="">
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select([
+      ['Select One',''], 'male', 'female'])%>
+  </div>
+
+  <div class="">
+    <%= f.label :indoor %>
+    <%= f.check_box :indoor %>
+  </div>
+
+  <div class="">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="">
+    <%= f.submit %>
+  </div>
+
+  <% end %>

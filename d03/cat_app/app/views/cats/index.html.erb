@@ -1,0 +1,22 @@
+<h1>Cats!</h1>
+<ul>
+  <% @cats.each do |cat| %>
+    <li>
+    <%= link_to cat.name, cat_path(cat) %>
+    <%= cat.name %> is a <%= cat.age %>
+    year old <%= cat.breed %>.
+    <% if cat.gender == 'female' %>
+        She
+      <% else %>
+        He
+      <% end %>
+        is an <% if cat.indoor %>
+        indoor
+      <%else%>
+        outdoor
+      <%end%>
+      cat.
+  <% end %>
+  </li>
+
+</ul>

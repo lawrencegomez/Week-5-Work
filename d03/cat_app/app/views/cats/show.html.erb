@@ -1,0 +1,9 @@
+<h1><%= @cat.name%></h1>
+
+Age: <%= @cat.age%><br>
+Breed: <%= @cat.breed%><br>
+Gender: <%= @cat.gender%><br>
+<%= 'Indoor' if @cat.indoor %>
+<%= 'Outdoor' unless @cat.indoor %><br><br>
+
+<%= image_tag @cat.image %>
