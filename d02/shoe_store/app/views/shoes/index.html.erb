@@ -1,0 +1,5 @@
+<ul>
+  <% @shoes.each do |s| %>
+  <li> <%= link_to s.name, shoe_path(s) %> </li>
+<% end %>
+</ul>
