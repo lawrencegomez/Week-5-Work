@@ -7,3 +7,6 @@ Gender: <%= @cat.gender%><br>
 <%= 'Outdoor' unless @cat.indoor %><br><br>
 
 <%= image_tag @cat.image %>
+
+<%= link_to 'Delete Cat', destroy_cat_path(@cat), {method: 'DELETE'} %>
+<%= link_to 'Edit Cat', edit_cat_path(@cat) %>
