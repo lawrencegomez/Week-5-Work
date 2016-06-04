@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vampire.name %>
+  <!-- display the vampire's name -->
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @vampire.age %>
+
+  <!-- display the vampire's age -->
+</p>
+
+<p>
+  <strong>Sire:</strong>
+  <%= @vampire.sire %>
+
+  <!-- display the vampire's sire -->
+</p>
+
+<p>
+  <strong>Staked:</strong>
+  <%= "This vampire has been staked!" if @vampire.staked %>
+  <%= "This vampire has not been staked yet..." unless @vampire.staked %>
+
+</p>
+
+<%= link_to 'Edit Vampire', edit_vampire_path(@vampire) %>
+<%= link_to 'All Vampires', vampires_path(@vampire) %>
+
+<!-- add a link to this vampire's edit page -->
+<!-- add a link to the index page -->

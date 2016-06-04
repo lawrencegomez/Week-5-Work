@@ -1,0 +1,6 @@
+<h1><%= @user.name %></h1>
+
+<% @user.blurbs.each do |b| %>
+<h3><%= b.title %> </h3>
+<p> <%=b.body%></p>
+<% end %>

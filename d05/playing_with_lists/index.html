@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Playling with Lists</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var myList = [4,2,0,5,1]
+      console.log(myList);
+      var myShuffledList = []
+
+      function  removeElement() {
+        var rand = Math.floor(Math.random() * (myList.length - 1) + 1)
+        if (rand > myList.length - 1 && myList.length != 0) {
+          var lastOne = parseInt(myList[0])
+          myShuffledList.push(lastOne)
+          console.log(myShuffledList);
+          myList = []
+        }
+        else if (myList.length == 0) {
+          console.log("That's all folks");
+          }
+        else {
+          var removed = parseInt(myList.splice(rand, 1))
+          myShuffledList.push(removed)
+          console.log(myShuffledList);
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
