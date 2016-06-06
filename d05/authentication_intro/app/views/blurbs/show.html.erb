@@ -4,4 +4,4 @@
 Title: <%=@blurb.title%> <br>
 Body: <%=@blurb.body%>
 
-<%= link_to 'Your Profile', user_path %>
+<%= link_to 'Your Profile', user_path(@blurb.user) %>
